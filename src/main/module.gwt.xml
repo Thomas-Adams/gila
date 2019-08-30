@@ -1,0 +1,26 @@
+<module rename-to="gila">
+    <inherits name="com.google.gwt.user.User"/>
+    <inherits name="com.github.gwtboot.starter.Starter"/>
+    <inherits name="org.fusesource.restygwt.RestyGWT"/>
+    <inherits name="com.github.nmorel.gwtjackson.GwtJackson" />
+    <inherits name="com.google.gwt.uibinder.UiBinder"/>
+    <inherits name="com.google.gwt.user.theme.clean.Clean"/>
+    <inherits name="com.google.gwt.resources.Resources" />
+
+    <inherits name="org.hibernate.validator.HibernateValidator" />
+    <replace-with class="org.enargit.gwt.gila.client.validation.GwtValidatorFactory">
+        <when-type-is class="javax.validation.ValidatorFactory" />
+    </replace-with>
+    <replace-with class="org.enargit.gwt.gila.client.validation.ValidationMessagesResolver">
+        <when-type-is class="com.google.gwt.validation.client.UserValidationMessagesResolver" />
+    </replace-with>
+
+
+    <set-configuration-property name="CssResource.enableGss" value="true" />
+    <set-property name="restygwt.encodeDecode.useGwtJackson" value="true" />
+
+    <entry-point class="org.enargit.gwt.gila.client.GilaGwtMain"/>
+
+    <source path="client"/>
+    <source path="shared"/>
+</module>

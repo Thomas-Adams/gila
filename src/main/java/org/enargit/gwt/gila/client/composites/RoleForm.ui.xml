@@ -1,0 +1,16 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <g:HTMLPanel>
+        <div align="center">
+            <g:VerticalPanel>
+                <g:Label text="Role name"/>
+                <g:TextBox ui:field="role"/>
+                <g:Label text="Role description"/>
+                <g:TextArea ui:field="description"/>
+            </g:VerticalPanel>
+            <g:HorizontalPanel>
+                <g:Button ui:field="saveButton">Save role</g:Button>
+                <g:Label ui:field="message"/>
+            </g:HorizontalPanel>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder>

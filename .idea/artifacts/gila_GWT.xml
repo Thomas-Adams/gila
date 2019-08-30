@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact name="gila:GWT">
+    <output-path>$PROJECT_DIR$/out/artifacts/gila_GWT</output-path>
+    <root id="root">
+      <element id="gwt-compiler-output" facet="gila/gwt/GWT" />
+    </root>
+  </artifact>
+</component>
