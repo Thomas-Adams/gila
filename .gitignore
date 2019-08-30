@@ -63,3 +63,14 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 
+.idea/vcs.xml
+src/main/java/org/enargit/gwt/gila/server/
+src/main/java/org/enargit/gwt/gila/shared/
+src/main/webapp/
+src/test/
+web/
+/.gitignore
+/gila.iml
+/.idea/
+
+out/
