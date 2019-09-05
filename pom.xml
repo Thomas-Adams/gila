@@ -89,6 +89,11 @@
             <version>${gwt-boot-modules.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.github.gwtboot</groupId>
+            <artifactId>gwt-boot-starter-ui-gwtbootstrap3</artifactId>
+            <version>${gwt-boot-modules.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.fusesource.restygwt</groupId>
             <artifactId>restygwt</artifactId>
             <version>2.2.0</version>
@@ -143,6 +148,7 @@
                     <startupUrls>
                         <url>/gila/</url>
                     </startupUrls>
+                    <port>8888</port>
                     <compilerArgs>
                         <compilerArg>-logLevel</compilerArg>
                         <compilerArg>INFO</compilerArg>

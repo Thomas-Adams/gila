@@ -1,3 +1,4 @@
+<!--
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
     <g:HTMLPanel>
         <div align="center">
@@ -13,4 +14,48 @@
             </g:HorizontalPanel>
         </div>
     </g:HTMLPanel>
+</ui:UiBinder>
+-->
+
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:b="urn:import:org.gwtbootstrap3.client.ui"
+             xmlns:select="urn:import:org.gwtbootstrap3.extras.select.client.ui">
+
+    <ui:style>
+        .margin {
+            margin-top: 20px;
+        }
+    </ui:style>
+    <g:ScrollPanel>
+        <b:Container fluid="false">
+            <b:Row>
+                <b:Column size="MD-4"/>
+                <b:Column size="MD-4"><b:Heading size="H2" text="Role form"/></b:Column>
+                <b:Column size="MD-4"/>
+            </b:Row>
+            <b:Row>
+                <b:Column size="MD-4"/>
+                <b:Column size="MD-4">
+                    <b:Form type="DEFAULT">
+                        <b:FormGroup>
+                            <b:FormLabel text="Role name"/>
+                            <b:TextBox ui:field="role" placeholder="Role name"/>
+                            <b:HelpBlock>The role name must have the 'ROLE_' prefix.</b:HelpBlock>
+                        </b:FormGroup>
+                        <b:FormGroup>
+                            <b:FormLabel text="Role description"/>
+                            <b:TextArea ui:field="description" placeholder="Role description"/>
+                        </b:FormGroup>
+                        <b:FormGroup>
+                            <b:Button ui:field="saveButton" addStyleNames="btn btn-primary" text="Save"/>
+                        </b:FormGroup>
+                        <b:Alert visible="false" ui:field="message"/>
+                    </b:Form>
+                </b:Column>
+                <b:Column size="MD-4"/>
+            </b:Row>
+        </b:Container>
+    </g:ScrollPanel>
+
 </ui:UiBinder>

@@ -1,6 +1,7 @@
 <module rename-to="gila">
     <inherits name="com.google.gwt.user.User"/>
     <inherits name="com.github.gwtboot.starter.Starter"/>
+    <inherits name="com.github.gwtboot.starter.GwtBootstrap3Starter"/>
     <inherits name="org.fusesource.restygwt.RestyGWT"/>
     <inherits name="com.github.nmorel.gwtjackson.GwtJackson" />
     <inherits name="com.google.gwt.uibinder.UiBinder"/>
@@ -17,6 +18,7 @@
 
 
     <set-configuration-property name="CssResource.enableGss" value="true" />
+    <set-configuration-property name="CssResource.conversionMode"    value="strict" />
     <set-property name="restygwt.encodeDecode.useGwtJackson" value="true" />
 
     <entry-point class="org.enargit.gwt.gila.client.GilaGwtMain"/>

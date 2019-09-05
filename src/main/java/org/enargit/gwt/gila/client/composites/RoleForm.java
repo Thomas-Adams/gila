@@ -13,6 +13,8 @@ import org.enargit.gwt.gila.client.dto.RoleDto;
 import org.fusesource.restygwt.client.Defaults;
 import org.fusesource.restygwt.client.Method;
 import org.fusesource.restygwt.client.MethodCallback;
+import org.gwtbootstrap3.client.ui.Alert;
+import org.gwtbootstrap3.client.ui.constants.AlertType;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
@@ -28,16 +30,16 @@ public class RoleForm extends Composite {
     private static final RoleFormUiBinder uiBinder = GWT.create(RoleFormUiBinder.class);
 
     @UiField
-    TextBox role;
+    org.gwtbootstrap3.client.ui.TextBox role;
 
     @UiField
-    TextArea description;
+    org.gwtbootstrap3.client.ui.TextArea description;
 
     @UiField
-    Button saveButton;
+    org.gwtbootstrap3.client.ui.Button saveButton;
 
     @UiField
-    Label message;
+    Alert message;
 
 
     public RoleForm() {
@@ -62,7 +64,9 @@ public class RoleForm extends Composite {
         }
 
         if (!isValid) {
+            this.message.setType(AlertType.DANGER);
             this.message.setText(errorMessages.toString());
+            this.message.setVisible(true);
         } else {
             Defaults.setServiceRoot("http://localhost:9900");
             RoleService roleService = GWT.create(RoleService.class);
@@ -75,11 +79,15 @@ public class RoleForm extends Composite {
 
         @Override
         public void onFailure(Method method, Throwable throwable) {
+            RoleForm.this.message.setVisible(true);
+            RoleForm.this.message.setType(AlertType.DANGER);
             RoleForm.this.message.setText(throwable.getMessage());
         }
 
         @Override
         public void onSuccess(Method method, RoleDto roleDto) {
+            RoleForm.this.message.setVisible(true);
+            RoleForm.this.message.setType(AlertType.SUCCESS);
             RoleForm.this.message.setText("Role successfule created with ID : " + roleDto.getId());
         }
     }
