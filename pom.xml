@@ -94,6 +94,11 @@
             <version>${gwt-boot-modules.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.github.gwtboot</groupId>
+            <artifactId>gwt-boot-starter-with-spring-boot</artifactId>
+            <version>${gwt-boot-modules.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.fusesource.restygwt</groupId>
             <artifactId>restygwt</artifactId>
             <version>2.2.0</version>
@@ -134,6 +139,11 @@
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
             <version>2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.gwt-crypto</groupId>
+            <artifactId>gwt-crypto</artifactId>
+            <version>2.3.0</version>
         </dependency>
     </dependencies>
 

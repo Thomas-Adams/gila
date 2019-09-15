@@ -8,6 +8,8 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.*;
 import org.enargit.gwt.gila.client.GilaGwtMain;
+import org.enargit.gwt.gila.client.data.dispatcher.BasicAuthDispatcher;
+import org.enargit.gwt.gila.client.data.dispatcher.Credentials;
 import org.enargit.gwt.gila.client.data.rest.RoleService;
 import org.enargit.gwt.gila.client.dto.RoleDto;
 import org.fusesource.restygwt.client.Defaults;
@@ -68,9 +70,12 @@ public class RoleForm extends Composite {
             this.message.setText(errorMessages.toString());
             this.message.setVisible(true);
         } else {
+            Credentials.INSTANCE.setUserName("tadams");
+            Credentials.INSTANCE.setPassword("tadams");
             Defaults.setServiceRoot("http://localhost:9900");
+            Defaults.setDispatcher(new BasicAuthDispatcher());
             RoleService roleService = GWT.create(RoleService.class);
-            roleService.saveRole(GilaGwtMain.createAuthHeader(), roleDto, new CallBackHandler());
+            roleService.save(roleDto, new CallBackHandler());
         }
     }
 

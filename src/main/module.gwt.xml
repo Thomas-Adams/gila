@@ -1,12 +1,12 @@
 <module rename-to="gila">
     <inherits name="com.google.gwt.user.User"/>
     <inherits name="com.github.gwtboot.starter.Starter"/>
-    <inherits name="com.github.gwtboot.starter.GwtBootstrap3Starter"/>
     <inherits name="org.fusesource.restygwt.RestyGWT"/>
     <inherits name="com.github.nmorel.gwtjackson.GwtJackson" />
     <inherits name="com.google.gwt.uibinder.UiBinder"/>
     <inherits name="com.google.gwt.user.theme.clean.Clean"/>
     <inherits name="com.google.gwt.resources.Resources" />
+    <inherits name="com.googlecode.gwt.crypto.Crypto"/>
 
     <inherits name="org.hibernate.validator.HibernateValidator" />
     <replace-with class="org.enargit.gwt.gila.client.validation.GwtValidatorFactory">

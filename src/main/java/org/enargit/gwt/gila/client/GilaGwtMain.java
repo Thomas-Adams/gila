@@ -3,7 +3,9 @@ package org.enargit.gwt.gila.client;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.RootPanel;
+import org.enargit.gwt.gila.client.composites.MainFrame;
 import org.enargit.gwt.gila.client.composites.RoleForm;
+import org.enargit.gwt.gila.client.composites.RoleFrame;
 import org.fusesource.restygwt.client.util.Base64Codec;
 
 import java.io.UnsupportedEncodingException;
@@ -15,22 +17,15 @@ public class GilaGwtMain implements EntryPoint {
             .getLogger(GilaGwtMain.class.getName());
 
 
-    public static String createAuthHeader() {
-        String credentials = "tadams:tadams";
-        try {
-            return Base64Codec.encode(credentials.getBytes("UTF-8"));
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
     @Override
     public void onModuleLoad() {
 
 
-        RoleForm roleForm = new RoleForm();
-        RootPanel.get("mainPanel").add(roleForm);
+        RoleFrame mainFrame = new RoleFrame();
+        RootPanel.get("mainPanel").add(mainFrame);
+
+        //RoleForm roleForm = new RoleForm();
+        //RootPanel.get("mainPanel").add(roleForm);
 
 
 //        Defaults.setServiceRoot("/smilodon");
